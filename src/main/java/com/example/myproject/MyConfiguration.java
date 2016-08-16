@@ -1,6 +1,8 @@
 package com.example.myproject;
 
+import com.example.myproject.config.ConnectionProperties;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 
@@ -9,7 +11,7 @@ import org.springframework.context.annotation.ImportResource;
  */
 
 @Configuration
-// @ImportResource
-@EnableAutoConfiguration
+//@EnableAutoConfiguration
+@EnableConfigurationProperties(ConnectionProperties.class)
 public class MyConfiguration {
 }
