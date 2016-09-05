@@ -4,11 +4,8 @@
  */
 package com.example.myproject.web;
 
-import com.example.myproject.Bean.User;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.myproject.bean.User;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author Chen Hao
@@ -34,5 +31,12 @@ public class MyRestController {
     public String deleteUser(@PathVariable Long user){
         System.out.println("delete user");
         return "" + user;
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    // the User must have the default constructor
+    public String login(@RequestBody User user){
+        System.out.println(user.getName());
+        return user.getName();
     }
 }

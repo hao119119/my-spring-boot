@@ -2,7 +2,7 @@
  * @(#)User.java V1.2.0 16-8-16 
  * Copyright (c) 2014-2016 The inspur Software Foundation.All rights reserved 
  */
-package com.example.myproject.Bean;
+package com.example.myproject.bean;
 
 /**
  * @author Chen Hao
@@ -13,6 +13,13 @@ public class User {
     private String id;
 
     private String name;
+
+    private String emailAddress;
+
+    private String firstName;
+
+    private String lastName;
+
 
     public String getId() {
         return id;
@@ -33,6 +40,9 @@ public class User {
     public User(String id){
         this.id = id;
         name = "haha";
+    }
+
+    public User(){
     }
 
 
